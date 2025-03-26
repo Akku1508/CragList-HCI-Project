@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderProducts(filteredProducts);
     }
 
-    // Function to render product cards
+   
     function renderProducts(filteredProducts) {
         productList.innerHTML = "";
         filteredProducts.forEach(product => {
@@ -85,10 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="card-body">
                             <h5 class="card-title">${product.name}</h5>
                             <p class="card-text left bold">$${product.price}</p>
-                            <p class="card-text left">${product.bedrooms} BR | ${product.bathrooms} BA</p>
-                            <p class="card-text left">${product.sqft} sqft</p>
+                            <p class="card-text left">${product.bedrooms || 0} BR | ${product.bathrooms || 0} BA</p>
+                            <p class="card-text left">${product.sqft || 'N/A'} sqft</p>
                             <p class="card-text right">${product.date}</p>
-                            <a href="#" class="btn btn-primary">View Details</a>
+                            <a href="product_details.html?id=${product.id}" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
             productList.innerHTML += card;
         });
     }
-
+    
     // Event listener for category selection
     document.querySelectorAll(".list-group-item").forEach(item => {
         item.addEventListener("click", () => {
