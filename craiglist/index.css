@@ -1,0 +1,233 @@
+.navbar {
+    justify-content: space-between;
+    
+    background-color: rgb(185, 163, 133);
+}
+html, body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-brand {
+    margin-left: 10px; /* Adjust as needed */
+    margin-left:50px;
+    margin-right:10px;
+    img{
+        width: 150px;
+    }
+}
+
+.navbar-nav {
+    margin-right: 50px;
+    justify-content: space-around;
+  
+    .nav-item{
+        margin: 0px 10px;
+    }
+}
+.collapse{
+    margin-right:20px;
+    
+}
+footer {
+    background-color: #7c97b1;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+.card{
+    margin:10px,20px;
+    transform:scaleY(20px);
+    height: 400px;
+    img{
+        width: auto;
+        height: 200px;
+    }
+}
+.card:hover{
+    transform:translateY(10px);
+    background-color: rgb(150, 136, 136);
+    color: white;
+}
+
+/* Existing styles... */
+
+/* Filter and Sort Section */
+/* Existing styles... */
+
+/* Filter and Sort Section */
+
+
+/* Existing styles... */
+
+/* Existing styles... */
+
+/* Categories Section */
+/* Existing styles... */
+
+/* Categories Section */
+/* Existing styles... */
+
+/* Categories Section */
+.categories-section {
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.categories-section button {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.categories-section .list-group-item {
+    cursor: pointer;
+    border: none;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+.categories-section .list-group-item:hover {
+    background-color: #e9ecef; /* Light hover effect */
+}
+
+/* Filter and Sort Section */
+.filter-sort-section {
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-header h4 {
+    margin-bottom: 0;
+}
+
+.filter-header button {
+    text-decoration: none;
+    color: #333;
+}
+
+#filtersContent {
+    display: block; /* Initially visible */
+}
+
+/* Product Cards */
+#productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Reduced gap between cards */
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 15px); /* Three cards per row by default */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Slightly larger image height */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: left; /* Better text alignment */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #333; /* Darker text color */
+    font-weight: bold; /* Bold title */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px; /* Better spacing */
+}
+
+.card-text.left {
+    text-align: left; /* Left-aligned text */
+}
+
+.card-text.right {
+    text-align: right; /* Right-aligned text */
+}
+
+.card-text.bold {
+    font-weight: bold; /* Bold text */
+}
+
+.btn-primary {
+    background-color: #7c97b1;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    width: 100%; /* Full-width button */
+}
+
+.btn-primary:hover {
+    background-color: #5a6f80;
+}
+
+/* Pagination */
+.pagination .page-item.active .page-link {
+    background-color: #7c97b1;
+    border-color: #7c97b1;
+}
+
+.pagination .page-link {
+    color: #7c97b1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 10px); /* Two cards per row on smaller screens */
+    }
+}
+
+/* Dynamic layout for categories */
+.collapsed #categoriesColumn {
+    display: none; /* Hide categories column when collapsed */
+}
+
+.collapsed #productsColumn {
+    flex: 0 0 100%; /* Expand products column to full width when categories are collapsed */
+}
+
+.collapsed #productList .card {
+    flex: 1 1 calc(33.333% - 15px); /* Three cards per row when categories are collapsed */
+}
+
+.expanded #categoriesColumn {
+    flex: 0 0 16.666%; /* Show categories column when expanded */
+}
+
+.expanded #productsColumn {
+    flex: 0 0 83.333%; /* Adjust products column width when categories are expanded */
+}
+
+.expanded #productList .card {
+    flex: 1 1 calc(50% - 15px); /* Two cards per row when categories are expanded */
+}
