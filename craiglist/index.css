@@ -311,3 +311,25 @@ footer {
         height: 300px;
     }
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    flex: 1;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
