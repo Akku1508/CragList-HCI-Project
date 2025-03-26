@@ -231,3 +231,83 @@ footer {
 .expanded #productList .card {
     flex: 1 1 calc(50% - 15px); /* Two cards per row when categories are expanded */
 }
+/* Product Details Container */
+#productDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+/* Carousel Styling */
+.carousel {
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Carousel indicators */
+.carousel-indicators button {
+    background-color: #7c97b1 !important;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Carousel navigation arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+/* Product Info Section */
+.product-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.product-info h2 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.product-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Price Highlight */
+.product-info .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e63946;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #productDetails {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel img {
+        height: 300px;
+    }
+}
